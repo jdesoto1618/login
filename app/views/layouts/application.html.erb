@@ -14,8 +14,15 @@
       Signed in as: <%= current_user.email %>
       <%= button_to 'Sign Out', sign_out_path, method: :delete %>
     <% else %>
-      <%= link_to 'Sign In', sign_in_path %>
+      <!-- commented this line out, since it made the sign in link appear twice -->
+      <%#= link_to 'Sign In', sign_in_path %>
     <% end %>
+
+    <hr>
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Secret Page", pages_secret_path %></li>
+    </ul>
 
     <div id="flash">
       <% flash.each do |key, value| %>
