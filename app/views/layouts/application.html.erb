@@ -6,12 +6,6 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <style>
-      /*set navbar to have square edges*/
-      .navbar {
-        border-radius: 0;
-      }
-    </style>
   </head>
 
   <body>
@@ -34,13 +28,14 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li class="active"><%= link_to "Home", root_path %> <span class="sr-only">(current)</span></li>
-              <li><%= link_to "Messages", pages_secret_path %> </li>
+              <li><%= link_to "Messaging", pages_email_path %> </li>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Login</a></li>
+            <ul class="fa-ul nav navbar-nav navbar-right">
               <% if signed_in? %>
                 <li><%= link_to 'Sign Out', sign_out_path, method: :delete %></li>
+              <% else %>
+                <li><%= link_to "Login", sign_in_path %></li>
               <% end %>
             </ul>
           </div><!-- .navbar-collapse -->
