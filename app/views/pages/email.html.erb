@@ -1,2 +1,24 @@
-<h1 class=text-center>Emails Page </h1>
-<p>Send an email by submitting this form!</p>
+<div class="container email">
+
+  <h1 class=text-center>Send E-mail</h1>
+
+  <form class="form-inline text-center" action="index.html" method="post">
+    <!-- name, email, message fields -->
+    <div class="form-group">
+      <input type="text" class="form-control name" name="name" placeholder="Your Name">
+    </div>
+    <br><br>
+
+    <div class="form-group">
+      <input type="email" class="form-control email" name="email" placeholder="Destination E-mail">
+    </div>
+    <br><br>
+
+    <div class="form-group">
+      <textarea name="message" class="form-control message" rows="4" cols="40" placeholder="Your Message"></textarea>
+    </div>
+    <br><br>
+
+    <button type="submit" class="btn btn-success submit" name="button">Send</button>
+  </form>
+</div>
