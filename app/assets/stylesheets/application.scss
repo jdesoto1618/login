@@ -17,9 +17,27 @@
 @import "bootstrap-sprockets";
 @import "bootstrap-custom";
 
+/* set body background color */
+body {
+  background-color: #ececec;
+}
+
+
+/* set container width to surround email form */
+div.container.email {
+  width: 353px;
+  background-color: #fff;
+  padding-bottom: 20px;
+}
+
 /*set navbar to have square edges*/
 .navbar {
   border-radius: 0;
+}
+
+/* set padding on h1 page titles */
+h1.text-center {
+  padding-bottom: 10px;
 }
 
 /* add padding to sign in/up, password forms */
@@ -86,4 +104,11 @@ div.other-links {
 /* set margin for flash notice */
 div.flash.notice {
   margin-left: 52px;
+}
+
+/* style inputs on email page to be the same width*/
+input.form-control.name,
+input.form-control.email,
+button.btn.btn-success.submit {
+  width: 323px;
 }
