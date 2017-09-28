@@ -6,8 +6,8 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get secret" do
-    get pages_secret_url
+  test "should get email" do
+    get pages_email_url
     assert_response :success
   end
 

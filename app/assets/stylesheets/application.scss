@@ -16,3 +16,74 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap-custom";
+
+/*set navbar to have square edges*/
+.navbar {
+  border-radius: 0;
+}
+
+/* add padding to sign in/up, password forms */
+div#clearance.sign-in,
+div#clearance.sign-up,
+div#clearance.password-reset {
+  padding-left: 50px;
+}
+
+/* add left margin to email fields to align it with password fields */
+input#session_email,
+input#user_email,
+input#password_email {
+  margin-left: 29px;
+  width: 190px;
+}
+
+/* set password field width */
+input#session_password,
+input#user_password {
+  width: 190px;
+}
+
+/* set bottom padding for page titles */
+h2 {
+  padding-bottom: 5px;
+}
+
+/* set top margin for sign up/in buttons */
+div.submit-field {
+  margin-top: 5px;
+}
+
+/* select sign in button for styling */
+div.submit-field>input {
+  border: none;
+  background-color: #fc8d68;
+  color: #fff;
+  padding: 5px;
+  margin-left: 70px;
+  margin-bottom: 25px;
+  width: 190px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* set margin for email text field */
+div.text-field {
+  margin-bottom: 5px;
+}
+
+/* set styles for links */
+div.other-links>a {
+  border: 1px solid #337ab7;
+  border-radius: 2px;
+  padding: 6px;
+}
+
+/* set margin for other-links div */
+div.other-links {
+  margin-left: 70px;
+}
+
+/* set margin for flash notice */
+div.flash.notice {
+  margin-left: 52px;
+}

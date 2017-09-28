@@ -1,10 +1,10 @@
 class PagesController < ApplicationController
-  # require users to sign up before seeing the secret page
-  before_action :require_login, only: [:secret]
+  # require users to sign up before seeing the emails page
+  before_action :require_login, only: [:email]
 
   def index
   end
 
-  def secret
+  def email
   end
 end
