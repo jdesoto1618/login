@@ -10,7 +10,7 @@
 
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <!-- change container-fluid class to container so the navbar items have padding -->
         <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
@@ -42,10 +42,8 @@
         </div><!-- .container-fluid -->
       </nav>
 
-    <!-- flash messges from clearance when a user signs in successfully -->
-    <%# if signed_in? %>
-      <!-- Signed in as: <%#= current_user.email %> -->
-    <%# end %>
+    <!-- background image for all pages -->
+    <%= image_tag('hb_new.jpg', draggable: "true", id: "drag1", class: "background") %>
 
     <div id="flash">
       <% flash.each do |key, value| %>

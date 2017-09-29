@@ -1,22 +1,22 @@
 <div class="container email">
 
-  <h1 class=text-center>Send E-mail</h1>
+  <h1 class="text-center send-email">Send E-mail</h1>
 
   <p>From: <%= current_user.email %> </p>
   <form class="form-inline text-center" action="/send" method="post">
     <!-- name, email, message fields -->
     <div class="form-group">
-      <input type="text" class="form-control name" name="name" placeholder="Your Name">
+      <input type="email" class="form-control email" name="email" placeholder="Destination E-mail" required>
     </div>
     <br><br>
 
     <div class="form-group">
-      <input type="email" class="form-control email" name="email" placeholder="Destination E-mail">
+      <input type="text" class="form-control name" name="name" placeholder="Your Name" required>
     </div>
     <br><br>
 
     <div class="form-group">
-      <textarea name="message" class="form-control message" rows="4" cols="40" placeholder="Your Message"></textarea>
+      <textarea name="message" class="form-control message" rows="4" cols="40" placeholder="Message Text" required></textarea>
     </div>
     <br><br>
 

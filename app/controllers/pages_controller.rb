@@ -7,7 +7,7 @@ class PagesController < ApplicationController
 
   def email
     @user = current_user
-    UserMailer.send_email(@user).deliver
+    # UserMailer.send_email(@user).deliver
   end
 
   def show
