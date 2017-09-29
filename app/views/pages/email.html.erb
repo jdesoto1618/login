@@ -2,7 +2,8 @@
 
   <h1 class=text-center>Send E-mail</h1>
 
-  <form class="form-inline text-center" action="index.html" method="post">
+  <p>From: <%= current_user.email %> </p>
+  <form class="form-inline text-center" action="/send" method="post">
     <!-- name, email, message fields -->
     <div class="form-group">
       <input type="text" class="form-control name" name="name" placeholder="Your Name">
@@ -20,5 +21,6 @@
     <br><br>
 
     <button type="submit" class="btn btn-success submit" name="button">Send</button>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   </form>
 </div>
