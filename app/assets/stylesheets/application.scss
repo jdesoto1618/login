@@ -22,12 +22,12 @@ body {
   background-color: #ececec;
 }
 
-
 /* set container width to surround email form */
 div.container.email {
   width: 353px;
   background-color: #fff;
   padding-bottom: 20px;
+  margin-top: 40px;
 }
 
 /*set navbar to have square edges*/
@@ -37,14 +37,21 @@ div.container.email {
 
 /* set padding on h1 page titles */
 h1.text-center {
+  margin-top: 40px;
   padding-bottom: 10px;
+}
+
+/* center text, set bottom padding for h2 page titles */
+h2 {
+  padding-bottom: 5px;
+  text-align: center;
 }
 
 /* add padding to sign in/up, password forms */
 div#clearance.sign-in,
 div#clearance.sign-up,
 div#clearance.password-reset {
-  padding-left: 50px;
+  margin-top: 40px;
 }
 
 /* add left margin to email fields to align it with password fields */
@@ -61,10 +68,6 @@ input#user_password {
   width: 190px;
 }
 
-/* set bottom padding for page titles */
-h2 {
-  padding-bottom: 5px;
-}
 
 /* set top margin for sign up/in buttons */
 div.submit-field {
@@ -87,6 +90,14 @@ div.submit-field>input {
 /* set margin for email text field */
 div.text-field {
   margin-bottom: 5px;
+}
+
+/* center sign in/up form fields */
+div.text-field,
+div.password-field,
+div.submit-field,
+div.other-links {
+  text-align: center;
 }
 
 /* set styles for links */

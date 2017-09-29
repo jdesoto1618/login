@@ -43,9 +43,9 @@
       </nav>
 
     <!-- flash messges from clearance when a user signs in successfully -->
-    <% if signed_in? %>
-      Signed in as: <%= current_user.email %>
-    <% end %>
+    <%# if signed_in? %>
+      <!-- Signed in as: <%#= current_user.email %> -->
+    <%# end %>
 
     <div id="flash">
       <% flash.each do |key, value| %>
