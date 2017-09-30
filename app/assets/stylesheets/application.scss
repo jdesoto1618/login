@@ -53,6 +53,8 @@ h2 {
   padding-bottom: 5px;
   text-align: center;
   margin-left: 55px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
 }
 
 /* set h3 styles for index page */
@@ -61,6 +63,11 @@ h3.text-center {
   margin-top: 120px;
 }
 
+/* turn off labels. will use placeholders */
+.email-label,
+.password-label {
+  display: none;
+}
 /* add margin to sign in/up, password forms */
 div#clearance.sign-in,
 div#clearance.sign-up,
@@ -69,11 +76,10 @@ div#clearance.password-reset {
   margin-right: 70px;
 }
 
-/* add left margin to email fields to align it with password fields */
+/* set width to input fields */
 input#session_email,
 input#user_email,
 input#password_email {
-  margin-left: 29px;
   width: 190px;
 }
 
@@ -95,15 +101,17 @@ div.submit-field>input {
   color: #fff;
   padding: 5px;
   margin-left: 70px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   width: 190px;
   font-weight: bold;
   border-radius: 4px;
 }
 
 /* set margin for email text field */
-div.text-field {
-  margin-bottom: 5px;
+div.text-field,
+div.password-field {
+  margin-bottom: 10px;
+  margin-left: 70px;
 }
 
 /* center sign in/up form fields */

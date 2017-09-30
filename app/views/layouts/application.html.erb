@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/fonts' %>
   </head>
 
   <body>
@@ -28,7 +29,7 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li><%= link_to "Home", root_path %> <span class="sr-only">(current)</span></li>
-              <li><%= link_to "Send E-mail", pages_email_path %> </li>
+              <li><%= link_to "Send E-mail", sign_in_path %> </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -55,6 +56,28 @@
   </body>
   <script>
     $(document).ready(function () {
+      // save the full page URL
+      var loc = window.location.href;
+      // set classes on labels so they can be targeted with css
+      $('div.text-field label').addClass('email-label');
+      $('div.password-field label').addClass('password-label');
+      // set required tags in markup
+      $('#session_email').attr('required', true);
+      $('#session_password').attr('required', true);
+      $('#user_email').attr('required', true);
+      $('#user_password').attr('required', true);
+      $(function() {
+        if (/sign_in/.test(loc) || /session/.test(loc)) {
+          // set placeholders on input fields, sign in page
+          document.getElementById("session_email").setAttribute("placeholder", "E-mail Address");
+          document.getElementById("session_password").setAttribute("placeholder", "Password");
+        }
+        if (/sign_up/.test(loc)) {
+          // set placeholders on input fields, sign up page
+          document.getElementById("user_email").setAttribute("placeholder", "E-mail Address");
+          document.getElementById("user_password").setAttribute("placeholder", "Password");
+        }
+      });
       var url = window.location;
       $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
       $('ul.nav a').filter(function() {
