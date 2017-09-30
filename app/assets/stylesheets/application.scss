@@ -163,3 +163,9 @@ button.btn.btn-success.submit {
   max-width: 100%;
   height: auto;
 }
+
+@media only screen and (max-width: 480px) {
+  #drag1 {
+    height: 611px;
+  }
+}
