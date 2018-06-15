@@ -89,7 +89,7 @@
       $('li.active a').css('font-weight','bold');
       // change the message for password reset
       $('.password-reset p').text('Please enter your e-mail address to reset your password.');
-      // note, this worked, but wasn;t consistent using percentages. left this commented out
+      // note, this worked, but wasn't consistent using percentages. left this commented out
       // $('button').on('click', (function(){
       //   if($(this).attr('aria-expanded') === 'false') {
       //     // adjust top margin to accomodate open hamburger menu
@@ -102,3 +102,8 @@
     }); // ends document.ready function
 </script>
 </html>
+<%# TODO: add backend form validations
+          create action mailer stuff. check other app to see how this was done
+          add figaro gem for converting info to env variable in prod
+          check if user is greeted on sign in. this used to work, not sure if it still does
+%>
