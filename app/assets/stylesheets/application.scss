@@ -17,9 +17,21 @@
 @import "bootstrap-sprockets";
 @import "bootstrap-custom";
 
-/* set body background color */
-body {
-  background-color: #ececec;
+/*set navbar to have square edges*/
+.navbar {
+  border-radius: 0;
+}
+
+/* set styles for navbar brand. make hover state the same color and cursor */
+div.navbar-header>a.navbar-brand,
+div.navbar-header>a.navbar-brand:hover {
+  cursor: default;
+  color: #9d9d9d;
+}
+
+/* set cursor for all other navbar elements */
+ul.nav.navbar-nav {
+  cursor: pointer;
 }
 
 /* container div styling on email form */
@@ -30,11 +42,6 @@ div.container.email {
   margin-top: 120px;
   border: 1px solid #bbecfc;
   border-radius: 5px;
-}
-
-/*set navbar to have square edges*/
-.navbar {
-  border-radius: 0;
 }
 
 /* set padding on h1 page titles */
@@ -48,13 +55,13 @@ h1.text-center.send-email {
   margin-top: 30px;
 }
 
-/* center text, set bottom padding for h2 page titles */
+/* sset styles for clearance h2 title */
 h2 {
   padding-bottom: 5px;
   text-align: center;
-  margin-left: 55px;
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
+  color: #fff;
 }
 
 /* set h3 styles for index page */
@@ -68,25 +75,27 @@ h3.text-center {
 .password-label {
   display: none;
 }
+
 /* add margin to sign in/up, password forms */
 div#clearance.sign-in,
 div#clearance.sign-up,
 div#clearance.password-reset {
   margin-top: 120px;
-  margin-right: 70px;
+  text-align: center;
 }
 
-/* set width to input fields */
+/* set styles for email and password fields */
 input#session_email,
 input#user_email,
-input#password_email {
-  width: 190px;
-}
-
-/* set password field width */
+input#password_email,
 input#session_password,
 input#user_password {
-  width: 190px;
+  width: 40.5%;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  padding-left: 5px;
 }
 
 /* set top margin for sign up/in buttons */
@@ -94,24 +103,23 @@ div.submit-field {
   margin-top: 5px;
 }
 
-/* select sign in button for styling */
+/* set styles for sign in button */
 div.submit-field>input {
   border: none;
   background-color: #fc8d68;
   color: #fff;
   padding: 5px;
-  margin-left: 70px;
   margin-bottom: 30px;
-  width: 190px;
+  width: 40.5%;
   font-weight: bold;
   border-radius: 4px;
+  font-size: 15px;
 }
 
 /* set margin for email text field */
 div.text-field,
 div.password-field {
   margin-bottom: 10px;
-  margin-left: 70px;
 }
 
 /* center sign in/up form fields */
@@ -124,16 +132,12 @@ div.other-links {
 
 /* set styles for links */
 div.other-links>a {
-  // border: 1px solid #337ab7;
-  border-radius: 2px;
+  display: inline-block;
+  border-radius: 4px;
   padding: 6px;
   background-color: #fc8d68;
   color: #fff;
-}
-
-/* set margin for other-links div */
-div.other-links {
-  margin-left: 70px;
+  width: 20%;
 }
 
 /* set margin, styling for flash notices */
@@ -154,10 +158,55 @@ button.btn.btn-success.submit {
 
 /* background image styling */
 .background {
-  position: fixed;
+  position: fixed; /* keep image in place */
+  /* put the image in the top left corner */
   left: 0;
   top: 0;
+  /* maximize image height and width on all screen sizes */
   height: 100%;
   width: 100%;
   z-index: -1; /* send bg image all the way back */
+}
+
+/* media query for mobile */
+@media screen and (max-width: 767px) {
+  /* set top margin for mobile */
+  div#clearance.sign-in {
+    margin-top: 15%;
+  }
+
+  /* set width for email and password fields on mobile */
+  input#session_email,
+  input#user_email,
+  input#password_email,
+  input#session_password,
+  input#user_password,
+  div.submit-field>input {
+    width: 50%;
+  }
+
+  /* add custom border for hamburger menu li's, center text */
+  .nav>li {
+    border: 1px solid #9d9d9d;
+    border-radius: 4px;
+    text-align: center;
+    margin: 5px 5px 0 5px;
+  }
+
+  /* remove built in margin on expanded mobile hamburger menu */
+  #bs-example-navbar-collapse-1 > ul.nav.navbar-nav.navbar-right {
+    margin-top: 0;
+  }
+
+  /* remove built in bottom margin on expanded mobile hamburger menu */
+  #bs-example-navbar-collapse-1 > ul:nth-child(1) {
+    margin-bottom: 0;
+  }
+
+  /* set link styles for sign up, forgot password on mobile */
+  div.other-links>a {
+    display: block;
+    margin: 0 auto 5px; /* add 5px margin on the bottom only */
+    width: 50%; /* width matches the other input field widths */
+  }
 }
