@@ -171,8 +171,9 @@ button.btn.btn-success.submit {
 /* media query for mobile */
 @media screen and (max-width: 767px) {
   /* set top margin for mobile */
-  div#clearance.sign-in {
-    margin-top: 15%;
+  div#clearance.sign-in,
+  div#clearance.sign-up {
+    margin-top: 100px;
   }
 
   /* set width for email and password fields on mobile */
