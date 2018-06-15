@@ -3,7 +3,8 @@
   <head>
     <title>Login</title>
     <%= csrf_meta_tags %>
-
+    <!-- set this tag for responsive and mobile-first development -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= render 'layouts/fonts' %>
@@ -15,7 +16,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <!-- change container-fluid class to container so the navbar items have padding -->
         <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
+          <!-- brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
@@ -56,7 +57,7 @@
     </div>
   </body>
   <script>
-    $(document).ready(function () {
+    $(function () {
       // save the full page URL
       var loc = window.location.href;
       // set classes on labels so they can be targeted with css
@@ -78,12 +79,26 @@
           document.getElementById("user_email").setAttribute("placeholder", "E-mail Address");
           document.getElementById("user_password").setAttribute("placeholder", "Password");
         }
-      });
+      }); // ends sign-in/sign-up function if's
       var url = window.location;
       $('ul.nav a[href="'+ url +'"]').parent().addClass('active');
       $('ul.nav a').filter(function() {
         return this.href == url;
       }).parent().addClass('active');
-    });
+      // make the text in the current navbar selection bold
+      $('li.active a').css('font-weight','bold');
+      // change the message for password reset
+      $('.password-reset p').text('Please enter your e-mail address to reset your password.');
+      // note, this worked, but wasn;t consistent using percentages. left this commented out
+      // $('button').on('click', (function(){
+      //   if($(this).attr('aria-expanded') === 'false') {
+      //     // adjust top margin to accomodate open hamburger menu
+      //     $('div#clearance').css('margin-top','40%')
+      //   } else {
+      //     // set top margin to accomodate closed hamburger menu
+      //     $('div#clearance').css('margin-top','15%')
+      //   }; // ends if
+      // })); // ends click function for hamburger menu button
+    }); // ends document.ready function
 </script>
 </html>
