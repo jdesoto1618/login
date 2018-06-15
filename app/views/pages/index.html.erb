@@ -1,6 +1,6 @@
 
 <% if !signed_in? %>
-  <h3 class="text-center">Welcome! Login to send an email</h3>
+  <h2 class="text-center">Welcome! Login to send an email</h2>
 <% else %>
-  <h3 class="text-center">Welcome, <%= current_user.email %>!</h3><br><br>
+  <h2 class="text-center">Welcome, <%= current_user.email %>!</h2><br><br>
 <% end %>
